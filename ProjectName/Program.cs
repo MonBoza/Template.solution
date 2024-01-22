@@ -15,8 +15,8 @@ namespace ProjectName
 
       // app.UseDeveloperExceptionPage();
       app.UseHttpsRedirection();
-
-      app.UseRouting();
+      app.UseStaticFiles();
+      app.UseRouting();;
 
       app.MapControllerRoute(
         name: "default",
