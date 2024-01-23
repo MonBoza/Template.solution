@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using ToDoList.Models;
+using ProjectName.Models;
 using System;
-
-namespace ToDoList.Tests
+// Chang namespace to match the name of your project
+namespace ProjectName.Tests
 {
   [TestClass]
   public class ItemTests : IDisposable
@@ -25,7 +25,7 @@ namespace ToDoList.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
-      string description = "Walk the dog.";
+      string description = "";
 
       //Act
       Item newItem = new Item(description);
@@ -82,3 +82,6 @@ namespace ToDoList.Tests
     }
   }
 }
+
+// Compare this snippet from ProjectName.Tests/ModelTests/ItemTests.cs:
+// change names to match your project and class names

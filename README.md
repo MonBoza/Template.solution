@@ -9,6 +9,7 @@
 * C#
 * ASP.NET
 * MS TEST
+* Bootstrap
 
 ## Description
 
@@ -22,8 +23,26 @@ git clone https://github.com/MonBoza/project.git
 ```
 
 * Make sure .gitignore is added to the repository.
-* Run `dotnet build` in your terminal.
-* Run tests by navigating to the test directory and running `dotnet restore` and then `dotnet test`.
+* Run
+
+```bash
+dotnet build
+```
+
+ in your terminal.
+
+* Run tests by navigating to the test directory and running
+
+```bash
+dotnet restore
+```
+
+and then run
+
+```bash
+dotnet test
+```
+
 * Tests are located in the Project.Test directory.
 * Open the project in your favorite code editor.
 
