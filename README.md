@@ -29,8 +29,8 @@ dotnet add package MySqlConnector -v 2.2.0
 2. In Import Options select Import from Self-Contained File.
 
 3. Under Default Schema to be Imported to, Select the "New" button
-  * Enter the name of your database "project_name"
-  * Click OK
+    * Enter the name of your database "project_name"
+    * Click OK
 
 4. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
 
