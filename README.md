@@ -10,26 +10,63 @@
 * ASP.NET
 * MS TEST
 * Bootstrap
+* MySQL
+* ASP Core MVC MSBuild
 
 ## Description
 
+## Database Setup
+
+* Install MySqlConnector Package
+
+```bash
+dotnet add package MySqlConnector -v 2.2.0
+
+```
+
+1. In the Navigator>Administration window, select Data Import/Restore
+
+2. In Import Options select Import from Self-Contained File.
+
+3. Under Default Schema to be Imported to, Select the "New" button
+  * Enter the name of your database "project_name"
+  * Click OK
+
+4. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
+
+
 ## Setup/Installation Requirements
 
-* Open terminal or command prompt.
-* Clone the repository by running the following command to your desktop:
+1. Open terminal or command prompt.
+2. Clone the repository by running the following command to your desktop:
 
 ```bash
 git clone https://github.com/MonBoza/project.git
 ```
 
-* Make sure .gitignore is added to the repository.
-* Run
+3. Within the production directory "ProjectName", create new file called appsettings.json
+
+4. Within appsettings.json, put in the following code replacing the <code>uid</code> and the <code>pwd</code> values with youre own username and password for MySQL. 
+
+```bash
+{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_mysqlconnector;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];",
+      "TestConnection": "Server=localhost;Port=3306;database=to_do_list_with_mysqlconnector_test;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+  }
+}
+```
+
+5.  Make sure .gitignore is added to the repository.
+6. Run
 
 ```bash
 dotnet build
 ```
 
  in your terminal.
+
+## To Run Tests
 
 * Run tests by navigating to the test directory and running
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vendor Tracker</title>
+  <link rel="stylesheet" href="~/css/styles.css">
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+<img id="pierre" src="~/img/pierre.png" alt="Pierres Bakery Logo" class="logo">
+  @RenderBody()
+  @await Html.PartialAsync("Footer")
+</body>
+
+</html>
