@@ -34,7 +34,6 @@ dotnet add package MySqlConnector -v 2.2.0
 
 4. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
 
-
 ## Setup/Installation Requirements
 
 1. Open terminal or command prompt.
