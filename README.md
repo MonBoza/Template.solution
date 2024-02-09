@@ -1,6 +1,6 @@
-# (Application Name)
+# Eau Claire's Hair Salon
 
-## (Brief Description of Application)
+## An MVC web application to manage a hair salon employees and their clients
 
 ### By Monica Barboza
 
@@ -11,81 +11,102 @@
 * MS TEST
 * Bootstrap
 * MySQL
+* MySWL Workbench
+* EF Core
 * ASP Core MVC MSBuild
 
 ## Description
 
-## Database Setup
+How to Use:
 
-* Install MySqlConnector Package
+Stylist Management:
 
-```bash
-dotnet add package MySqlConnector -v 2.2.0
+* Add new stylists by providing their name and specialties.
+* Edit existing stylist details as needed.
 
-```
+Client Management:
 
-1. In the Navigator>Administration window, select Data Import/Restore
+* Add clients with their names, notes, and link them to specific stylists.Update client information as preferences or details change.
 
-2. In Import Options select Import from Self-Contained File.
+Search Function:
 
-3. Under Default Schema to be Imported to, Select the "New" button
-    * Enter the name of your database "project_name"
-    * Click OK
+* Use the search bar to quickly find clients based on keywords.
+* Enhance customer service by retrieving relevant information efficiently.
 
-4. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
+Notes Section:
+
+* Leave and view notes for each client to personalize their salon experience.
+
+This salon management application is tailored to meet the unique needs of salon owners, providing a comprehensive solution for effective stylist and client management. Stay organized, enhance customer satisfaction, and elevate your salon operations with our user-friendly platform.
 
 ## Setup/Installation Requirements
+
+This Project assumes you have MySql Server and Workbench  installed if you do not have them installed follow along with these lessons at
+[Learn how to program](https://full-time.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql).
 
 1. Open terminal or command prompt.
 2. Clone the repository by running the following command to your desktop:
 
-```bash
-git clone https://github.com/MonBoza/project.git
-```
+    ```bash
+    git clone https://github.com/MonBoza/HairSalon.Solution.git
+     ```
 
-3. Within the production directory "ProjectName", create new file called appsettings.json
+3. Open the project in your favorite code editor.
 
-4. Within appsettings.json, put in the following code replacing the <code>uid</code> and the <code>pwd</code> values with youre own username and password for MySQL. 
+4. Navigate to the production directory "HairSalon" and run the follow commands in your terminal to add the following dependencies
 
-```bash
-{
-  "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_mysqlconnector;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];",
-      "TestConnection": "Server=localhost;Port=3306;database=to_do_list_with_mysqlconnector_test;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
-  }
-}
-```
+    ```bash
+    dotnet add package Microsoft.EntityFrameworkCore -v 6.0.0
+    ```
 
-5.  Make sure .gitignore is added to the repository.
-6. Run
+    ```bash
+    dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
+    ```
 
-```bash
-dotnet build
-```
+5. Within the production directory `HairSalon`, create new file called `appsettings.json`
 
- in your terminal.
+6. Make sure appsettings.json is added to the .gitignore file and it is added to the repository before pushing with your personal information.
 
-## To Run Tests
+7. Within `appsettings.json`, put in the following code replacing the `uid` and the `pwd` values with your own username and password for MySQL.
 
-* Run tests by navigating to the test directory and running
+    ```bash
+    {
+      "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=monica_barboza;uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
+      }
+    }
+    ```
 
-```bash
-dotnet restore
-```
+8. Run
 
-and then run
+    ```bash
+    dotnet watch run
+    ```
+  
+in your terminal.
 
-```bash
-dotnet test
-```
+## To set up Database
 
-* Tests are located in the Project.Test directory.
-* Open the project in your favorite code editor.
+To run this application you need to import the `monica_barboza.sql` file located in the top of the repository to MySQL Workbench.
+
+1. In the MySql Workbench select Navigator > Administration window, select `Data Import/Restore`.
+
+2. In `Import Options` select `Import` from `Self-Contained File`.
+
+3. Navigate to the monica_barboza.sql file.
+
+4. Under `Default Schema` to be `Imported to`, Select the `New` button
+    * Enter the name of your database "monica_barboza"
+    * Click OK
+
+5. Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
+
+6. After you are finished with the above steps, reopen the `Navigator > Schemas` tab. Right click and select `Refresh All`.
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No Known bugs
+  * If bugs are discovered please contact the author
 
 ## License
 
@@ -99,4 +120,8 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 Email: (mailto:<MonBoza@gmail.com>)
 
-Copyright (c) Month day, 2024 Monica Barboza
+Copyright (c) February 02, 2024 Monica Barboza
+
+### SQL Schema Diagram
+
+<img src="image.png" alt="Schema Diagram" width="500px" />
